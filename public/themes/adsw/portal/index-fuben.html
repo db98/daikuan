@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="zh-cmn-Hans"><head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>{$site_info.site_name}</title>
+    <include file="public@head"/>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("video").attr("poster","");
+        });
+    </script>
+</head>
+
+<body>
+<div id="j_body">
+    <!--=============================================header=============================================-->
+    <include file="public@nav"/>
+
+    <!--====================banner-=======================-->
+
+    <a name="n_yf" id="n_yf"></a>
+
+
+
+    <!--=============================================header_end=============================================-->
+
+    <section id="banner" aos="fade-up" aos-duration="1000">
+
+        <div class="bd">
+
+            <ul>
+                <slides id="1">
+                    <li><a href="" title="" style="background:url({:cmf_get_image_url($vo.image)}) center top no-repeat"></a></li>
+                </slides>
+
+
+
+
+
+
+            </ul>
+
+        </div>
+
+
+
+        <a href="javascript:void(0)" class="prev bnt"><img src="style/images/bnt_bn_prev.png" /></a>
+
+        <a href="javascript:void(0)" class="next bnt"><img src="style/images/bnt_bn_next.png" /></a>
+
+
+
+    </section>
+
+    <div class="clear"></div>
+
+    <!-------end banner--------->
+
+
+
+    <!--=============================================content=============================================-->
+
+    <div class="s_main_box">
+
+
+
+        <section class="floor f1" id="s_pro">
+
+            <div class="main_box">
+
+                <div class="s_title" aos="fade-up" aos-duration="1000">
+
+
+
+                    <h1>Product Center</h1>
+
+                    <h2>产品中心</h2>
+
+
+
+                </div>
+
+                <div class="content" >
+
+
+
+                    <div class="bd img_size">
+
+                        <div class="section">
+                            <php>
+                                $category_ids=1;
+                            </php>
+                            <portal:articles limit="5" order="post.published_time DESC" categoryIds="$category_ids">
+                                <dl class="dl-horizontal">
+                                    <dt>
+                                        <a class="img-wraper" href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo['categories'][0]['id']))}">
+                                            <if condition="empty($vo.more.thumbnail)">
+                                                <img src="__TMPL__/public/assets/images/default_tupian4.png" class="img-responsive" alt="{$vo.post_title}"/>
+                                                <else/>
+                                                <img src="{:cmf_get_image_url($vo.more.thumbnail)}" class="img-responsive" alt="{$vo.post_title}"/>
+                                            </if>
+                                        </a>
+                                    </dt>
+                                    <dd>
+                                        <a href="{:url('portal/Article/index',array('id'=>$vo['id'],'cid'=>$vo['categories'][0]['id']))}">{$vo.post_title}</a>
+                                    </dd>
+                                </dl>
+                            </portal:articles>
+
+                            <a href="/chanpin/dumoshebei/" aos="fade-up" aos-duration="1000" class="more">查看更多</a>
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="clear"></div>
+
+            </div>
+
+
+
+
+
+        </section>
+
+        <div class="floor f2" id="s_about">
+
+            <div class="main_box">
+
+                <div class="s_title" aos="fade-up" aos-duration="1000">
+
+                    <h1>about us</h1>
+
+                    <h2>关于我们</h2>
+
+
+
+                </div>
+
+                <div class="content img_size" aos="fade-up" aos-duration="1000">
+
+
+
+                    <ul>
+
+                        <li class="li1">
+
+                            <div class="box">
+
+                                <div class="pic_box">
+
+                                    <img src="style/images/pic_s_about1.jpg" />
+
+                                </div>
+
+
+
+                            </div>
+
+                        </li>
+
+                        <li class="li2">
+
+                            <div class="box">
+
+                                <div class="pic_box">
+
+                                    <img src="style/images/pic_s_about2.jpg" />
+
+                                </div>
+
+
+
+                            </div>
+
+                        </li>
+
+                        <li class="li3">
+
+                            <div class="box">
+
+                                <div class="pic_box">
+
+                                    <img src="style/images/pic_s_about3.jpg" />
+
+                                </div>
+
+
+
+                            </div>
+
+                        </li>
+
+                        <li class="li4">
+
+                            <div class="box">
+
+                                <div class="text_box">
+
+                                    <strong>introduce</strong>
+
+                                    <span>公司简介</span>
+
+                                    <a href="/guanyu/jianjie/" class="more">查看更多</a>
+
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <li class="li5">
+
+                            <div class="box">
+
+                                <div class="pic_box">
+
+                                    <img src="style/images/pic_s_about4.jpg" />
+
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <li class="li6">
+
+                            <div class="box">
+
+                                <div class="text_box">
+
+                                    <strong>honor</strong>
+
+                                    <span>资质荣誉</span>
+
+                                    <a href="/guanyu/zizhi/" class="more">查看更多</a>
+
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <div class="clear"></div>
+
+                    </ul>
+
+                </div>
+
+
+
+            </div>
+
+
+
+        </div>
+
+        <div class="floor f3" id="s_news">
+
+            <div class="main_box">
+
+                <div class="s_title" aos="fade-up" aos-duration="1000">
+
+                    <h1>news center</h1>
+
+                    <h2>新闻中心</h2>
+
+
+
+                </div>
+
+                <div class="hd" aos="fade-up" aos-duration="1000">
+
+                    <a href="/xinwen/hangye/"><strong>行业动态</strong></a>
+
+                    <a href="/xinwen/gongsi/" ><strong>企业资讯</strong></a>
+
+
+
+                </div>
+
+                <div class="content bd" aos="fade-up" aos-duration="1000">
+
+                    <section class="section">
+
+                        <ul>
+
+
+
+
+
+                            <li> <a class="more" href="/xinwen/hangye/72.html"><img src="style/images/1543993490483264.png" alt="5G时代-钧盛新材料助推手机行业腾飞" /><h1>5G时代-钧盛新材料助推手机行业腾飞</h1></a>
+
+                                <p>
+
+                                    -----5G时代，塑胶外壳轮回 5G未至，在4G向5G过渡的时间段内，手机后盖去金属化已成定局，外壳材质的优...
+                                </p>
+
+                                <div class="fot_box">
+
+                                    <span>2018.12.05</span>
+
+                                    <a href="/xinwen/hangye/72.html" class="more">更多..</a>
+
+                                </div>
+
+                            </li>
+
+
+
+
+
+
+
+
+
+                            <div class="clear"></div>
+
+                        </ul>
+
+                        <div class="more_box">
+
+                            <a href="/xinwen/hangye/" class="more">查看更多</a>
+
+                        </div>
+
+                    </section>
+
+                    <section class="section">
+
+                        <ul>
+
+
+
+
+
+                            <li> <a class="more" href="/xinwen/gongsi/70.html"><img src="style/images/1536736273273898.png" alt="钧盛新材料 ● 西安未来之星            ---重磅！西安未来之星TOP100榜单揭晓" /><h1>钧盛新材料 ● 西安未来之星            ---重磅！西安未来之星TOP100榜单揭晓</h1></a>
+
+                                <p>
+
+                                    今天的大西安，正处在&ldquo;一带一路&rdquo;、国家中心城市建设等多重机遇叠加的黄金期；正处在&ldquo;聚焦三六九，...
+                                </p>
+
+                                <div class="fot_box">
+
+                                    <span>2018.09.12</span>
+
+                                    <a href="/xinwen/gongsi/70.html" class="more">更多..</a>
+
+                                </div>
+
+                            </li>
+
+
+                            <li> <a class="more" href="/xinwen/gongsi/68.html"><img src="style/images/20180912021135860.png" alt="联想YOGA Book C930如纸般的书写感觉 ---源自钧盛新材料" /><h1>联想YOGA Book C930如纸般的书写感觉 ---源自钧盛新材料</h1></a>
+
+                                <p>
+
+                                    为期5天的德国IFA 2018正式结束啦~在这全球数码发烧友的狂欢节上，全球上百家科技与互联网品牌频出新科...
+                                </p>
+
+                                <div class="fot_box">
+
+                                    <span>2018.09.11</span>
+
+                                    <a href="/xinwen/gongsi/68.html" class="more">更多..</a>
+
+                                </div>
+
+                            </li>
+
+
+                            <li> <a class="more" href="/xinwen/gongsi/67.html"><img src="style/images/20180502052248299.jpg" alt="西安钧盛春季烧烤活动" /><h1>西安钧盛春季烧烤活动</h1></a>
+
+                                <p>
+
+                                    为丰富员工的业余生活，在紧张繁忙的工作之余享受集体活动的乐趣，4月28日，在风景优美的太平峪森林公园...
+                                </p>
+
+                                <div class="fot_box">
+
+                                    <span>2018.05.02</span>
+
+                                    <a href="/xinwen/gongsi/67.html" class="more">更多..</a>
+
+                                </div>
+
+                            </li>
+
+
+
+                            <div class="clear"></div>
+
+                        </ul>
+
+                        <div class="more_box">
+
+                            <a href="/xinwen/gongsi/" class="more">查看更多</a>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+
+        <div class="floor f3" id="s_link_box" aos="fade-up" aos-duration="1000">
+
+
+
+            <div class="main_box">
+
+                <a class="fl" href="/lianxi/"><img src="style/images/pic_s_hr.png" alt=""></a>
+
+                <a class="fr" href="/zhaopin/"><img src="style/images/pic_s_contact.png" alt=""></a>
+
+                <div class="clear"></div>
+
+            </div>
+
+        </div>
+
+        <div class="floor f4" id="s_partner" aos="fade-up" aos-duration="1000">
+
+
+
+
+
+
+
+            <section class="main_box">
+
+                <div class="content">
+
+                    <div class="s_title" >
+
+                        <h1>合作机构</h1>
+
+                        <h2>Cooperation Agency</h2>
+
+                    </div>
+
+                    <div class="bd">
+
+                        <ul>
+
+
+
+                            <li>
+
+                                <a href="" target="_blank">
+
+                                    <img  src="style/images/20180308045748935.png" alt="西科天使基金" />
+
+                                </a>
+
+                            </li>
+
+
+
+
+                            <li>
+
+                                <a href="http://www.opt.ac.cn/" target="_blank">
+
+                                    <img  src="style/images/20180308045806429.png" alt="西安光机所" />
+
+                                </a>
+
+                            </li>
+
+
+
+
+                            <li>
+
+                                <a href="http://www.casstar.com.cn/web/home.do" target="_blank">
+
+                                    <img  src="style/images/20180308045823330.png" alt="中科创星" />
+
+                                </a>
+
+                            </li>
+
+
+
+
+                            <li>
+
+                                <a href="http://www.dtcap.com/cn/home.asp" target="_blank">
+
+                                    <img  src="style/images/20180308045839285.png" alt="徳同资本" />
+
+                                </a>
+
+                            </li>
+
+
+
+
+
+
+
+                        </ul>
+
+                    </div>
+
+                    <div class="clear"></div>
+
+                </div>
+
+            </section>
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+        <div class="clear"></div>
+
+
+
+
+
+    </div>
+
+    <!--============================footer============================= -->
+
+
+
+
+
+    <!--===============================footer====================================-->
+    <include file="public@footer"/>
+
+    <include file="public@piaofu"/>
+
+</div>
+<script type="text/jscript" src="style/js/j_animate.js"></script>
+
+<script language="JavaScript" src="/api.php?op=cnzzip"></script>
+</body>
+</html>
+
+

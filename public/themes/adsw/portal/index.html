@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="zh-cmn-Hans"><head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>{$site_info.site_name}</title>
+    <include file="public@head"/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <!-- Style file -->
+    <link rel="stylesheet" href="style/css/j_reset.css">
+    <link rel="stylesheet" href="style/css/j_web.css">
+    <link rel="stylesheet" href="style/css/j_animate.css">
+    <script type="text/javascript" src="style/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="style/js/j_reset.js"></script>
+    <script type="text/javascript" src="style/js/j_web.js"></script>
+    <script type="text/javascript" src="style/js/j_div_scoll.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("video").attr("poster","");
+        });
+    </script>
+</head>
+
+<body>
+<div id="j_body">
+    <!--=============================================header=============================================-->
+    <include file="public@nav"/>
+
+    <!--====================banner-=======================-->
+
+    <a name="n_yf" id="n_yf"></a>
+
+
+
+    <!--=============================================header_end=============================================-->
+
+    <section id="banner" aos="fade-up" aos-duration="1000">
+
+        <div class="bd">
+
+            <ul>
+                <slides id="1">
+                    <li><a href="" title="" style="background:url({:cmf_get_image_url($vo.image)}) center top no-repeat"></a></li>
+                </slides>
+
+
+
+
+
+
+            </ul>
+
+        </div>
+
+
+
+        <a href="javascript:void(0)" class="prev bnt"><img src="style/images/bnt_bn_prev.png" /></a>
+
+        <a href="javascript:void(0)" class="next bnt"><img src="style/images/bnt_bn_next.png" /></a>
+
+
+
+    </section>
+
+    <div class="clear"></div>
+
+    <!-------end banner--------->
+
+
+
+    <!--=============================================content=============================================-->
+
+    <div class="s_main_box">
+
+
+
+        <section class="floor f1" id="s_pro">
+
+            <div class="main_box">
+
+                <div class="s_title" aos="fade-up" aos-duration="1000">
+
+
+
+                    <h1>Product Center</h1>
+
+                    <h2>产品中心</h2>
+
+
+
+                </div>
+
+                <div class="content" >
+
+
+
+                    <div class="bd img_size">
+
+                        <div class="section">
+
+                            <ul aos="fade-up" aos-duration="1000">
+                                <php>
+                                    $category_ids=1;
+                                </php>
+                                <portal:articles limit="4" order="post.published_time DESC" categoryIds="$category_ids">
+                                    <li>
+
+                                        <a href="{:url('portal/Article/index',array('id'=>$vo['id'],'cid'=>$vo['category_id']))}">
+
+                                            <div class="pic_box"><img src="{:cmf_get_image_url($vo.more.thumbnail)}" alt="{$vo.post_title}"></div>
+
+                                            <h1>{$vo.post_title}</h1>
+
+                                        </a>
+
+                                    </li>
+                                </portal:articles>
+                                <div class="clear"></div>
+
+                            </ul>
+
+                            <a href="/portal/chanpin/" aos="fade-up" aos-duration="1000" class="more">查看更多</a>
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="clear"></div>
+
+            </div>
+
+
+
+
+
+        </section>
+
+        <div class="floor f2" id="s_about">
+
+            <div class="main_box">
+
+                <div class="s_title" aos="fade-up" aos-duration="1000">
+
+                    <h1>about us</h1>
+
+                    <h2>关于我们</h2>
+
+
+
+                </div>
+
+                <div class="content img_size" aos="fade-up" aos-duration="1000">
+
+
+
+                    <ul>
+
+                        <li class="li1">
+
+                            <div class="box">
+
+                                <div class="pic_box">
+
+                                    <img src="style/images/pic_s_about1.jpg" />
+
+                                </div>
+
+
+
+                            </div>
+
+                        </li>
+
+                        <li class="li2">
+
+                            <div class="box">
+
+                                <div class="pic_box">
+
+                                    <img src="style/images/pic_s_about2.jpg" />
+
+                                </div>
+
+
+
+                            </div>
+
+                        </li>
+
+                        <li class="li3">
+
+                            <div class="box">
+
+                                <div class="pic_box">
+
+                                    <img src="style/images/pic_s_about3.jpg" />
+
+                                </div>
+
+
+
+                            </div>
+
+                        </li>
+
+                        <li class="li4">
+
+                            <div class="box">
+
+                                <div class="text_box">
+
+                                    <strong>introduce</strong>
+
+                                    <span>公司简介</span>
+
+                                    <a href="/portal/guanyu/" class="more">查看更多</a>
+
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <li class="li5">
+
+                            <div class="box">
+
+                                <div class="pic_box">
+
+                                    <img src="style/images/pic_s_about4.jpg" />
+
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <li class="li6">
+
+                            <div class="box">
+
+                                <div class="text_box">
+
+                                    <strong>honor</strong>
+
+                                    <span>资质荣誉</span>
+
+                                    <a href="/portal/guanyu/zizhi/" class="more">查看更多</a>
+
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <div class="clear"></div>
+
+                    </ul>
+
+                </div>
+
+
+
+            </div>
+
+
+
+        </div>
+
+        <div class="floor f3" id="s_news">
+
+            <div class="main_box">
+
+                <div class="s_title" aos="fade-up" aos-duration="1000">
+
+                    <h1>news center</h1>
+
+                    <h2>新闻中心</h2>
+
+
+
+                </div>
+
+                <div class="hd" aos="fade-up" aos-duration="1000">
+
+                    <a href="portal/xinwen/"><strong>行业动态</strong></a>
+
+                    <a href="portal/xinwen/zizhi/" ><strong>企业资讯</strong></a>
+
+
+
+                </div>
+
+                <div class="content bd" aos="fade-up" aos-duration="1000">
+
+                    <section class="section">
+
+                        <ul>
+
+
+                            <php>
+                                $category_ids=2;
+                            </php>
+
+                            <portal:articles limit="4" order="post.published_time DESC" categoryIds="$category_ids">
+                            <li> <a class="more" href="{:url('portal/Article/index',array('id'=>$vo['id'],'cid'=>$vo['category_id']))}"><img src="{:cmf_get_image_url($vo.more.thumbnail)}" alt="{$vo.post_title}" /><h1>{$vo.post_title}</h1></a>
+                                <p>
+                                    {$vo.post_excerpt}
+                                    </p>
+
+                                <div class="fot_box">
+
+                                    <span>{$vo.create_time|date='Y-m-d'}</span>
+
+                                    <a href="{:url('portal/Article/index',array('id'=>$vo['id'],'cid'=>$vo['category_id']))}" class="more">更多..</a>
+
+                                </div>
+
+                            </li>
+                            </portal:articles>
+
+
+
+
+
+
+
+
+                            <div class="clear"></div>
+
+                        </ul>
+
+                        <div class="more_box">
+
+                            <a href="portal/xinwen/" class="more">查看更多</a>
+
+                        </div>
+
+                    </section>
+
+                    <section class="section">
+
+                        <ul>
+
+
+                            <php>
+                                $category_ids=3;
+                            </php>
+                            <portal:articles limit="4" order="post.published_time DESC" categoryIds="$category_ids">
+
+                            <li> <a class="more" href="{:url('portal/Article/index',array('id'=>$vo['id'],'cid'=>$vo['category_id']))}"><img src="{:cmf_get_image_url($vo.more.thumbnail)}" alt="{$vo.post_title}" /><h1>{$vo.post_title}</h1></a>
+
+                                <p>
+
+                                    {$vo.create_time|date='Y-m-d'}
+                                </p>
+
+                                <div class="fot_box">
+
+                                    <span>{$vo.create_time|date='Y-m-d'}</span>
+
+                                    <a href="{:url('portal/Article/index',array('id'=>$vo['id'],'cid'=>$vo['category_id']))}" class="more">更多..</a>
+
+                                </div>
+
+                            </li>
+
+                            </portal:articles>
+
+
+                            <div class="clear"></div>
+
+                        </ul>
+
+                        <div class="more_box">
+
+                            <a href="portal/xinwen/zizhi/" class="more">查看更多</a>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+
+        <div class="floor f3" id="s_link_box" aos="fade-up" aos-duration="1000">
+
+
+
+            <div class="main_box">
+
+                <a class="fl" href="portal/lianxi/"><img src="style/images/pic_s_hr.png" alt=""></a>
+
+                <a class="fr" href="portal/lianxi/"><img src="style/images/pic_s_contact.png" alt=""></a>
+
+                <div class="clear"></div>
+
+            </div>
+
+        </div>
+
+        <div class="floor f4" id="s_partner" aos="fade-up" aos-duration="1000">
+
+
+
+
+
+
+
+            <section class="main_box">
+
+                <div class="content">
+
+                    <div class="s_title" >
+
+                        <h1>合作机构</h1>
+
+                        <h2>Cooperation Agency</h2>
+
+                    </div>
+
+                    <div class="bd">
+
+                        <ul>
+
+
+                            <php>
+                                $category_ids=8;
+                                $page=[
+                                'list_rows'=>10,
+                                'next'=>'下一页',
+                                'prev'=>'上一页'
+                                ];
+                            </php>
+                            <portal:articles limit="10" order="post.published_time DESC" categoryIds="$category_ids" page="$page">
+
+                            <li>
+
+
+
+                                    <img  src="{:cmf_get_image_url($vo.more.thumbnail)}" alt="{$vo.post_title}" />
+
+                                </a>
+
+                            </li>
+                            </portal:articles>
+                        </ul>
+
+                    </div>
+
+                    <div class="clear"></div>
+
+                </div>
+
+            </section>
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+        <div class="clear"></div>
+
+
+
+
+
+    </div>
+
+    <!--============================footer============================= -->
+
+
+
+
+
+    <!--===============================footer====================================-->
+    <include file="public@footer"/>
+
+    <include file="public@piaofu"/>
+
+</div>
+<script type="text/jscript" src="style/js/j_animate.js"></script>
+
+<script language="JavaScript" src="/api.php?op=cnzzip"></script>
+</body>
+</html>
+
+

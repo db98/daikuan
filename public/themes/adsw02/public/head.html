@@ -1,0 +1,70 @@
+<taglib name="app\portal\taglib\Portal"/>
+<meta name="author" content="ThinkCMF">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="renderer" content="webkit">
+
+<meta http-equiv="Cache-Control" content="no-siteapp"/>
+<link href="__TMPL__/public/assets/simpleboot3/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"
+      type="text/css">
+<!--[if IE 7]>
+<![endif]-->
+<link href="__TMPL__/public/assets/css/style.css" rel="stylesheet">
+<link href="__TMPL__/public/assets/css/style.css" rel="stylesheet">
+<link href="__STATIC__/style/css/j_animate.css" rel="stylesheet">
+<link href="__STATIC__/style/css/j_reset.css" rel="stylesheet">
+<link href="__STATIC__/style/css/j_web.css" rel="stylesheet">
+<!--<link href="__STATIC__/style/css/shchj.css" rel="stylesheet">-->
+
+<style>
+    /*html{filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-filter: grayscale(1);}*/
+    #backtotop {
+        position: fixed;
+        bottom: 50px;
+        right: 20px;
+        display: none;
+        cursor: pointer;
+        font-size: 50px;
+        z-index: 9999;
+    }
+
+    #backtotop:hover {
+        color: #333
+    }
+
+    #main-menu-user li.user {
+        display: none
+    }
+</style>
+<script type="text/javascript">
+    //全局变量
+    var GV = {
+        ROOT: "__ROOT__/",
+        WEB_ROOT: "__WEB_ROOT__/",
+        JS_ROOT: "static/js/"
+    };
+</script>
+<script src="__STATIC__/style/js/j_animate.js"></script>
+<script src="__STATIC__/style/js/j_div_scoll.js"></script>
+<script src="__STATIC__/style/js/j_reset.js"></script>
+<script src="__STATIC__/style/js/j_web.js"></script>
+<script src="__STATIC__/style/js/jquery-1.9.1.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
+
+
+	

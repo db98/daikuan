@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{$theme_vars.name|default='ThinkCMF'}的网站</title>
+    <include file="public@head"/>
+    <link href="__TMPL__/public/assets/swiper4.5/dist/css/swiper.css" rel="stylesheet">
+    <script src="__TMPL__/public/assets/swiper4.5/dist/js/swiper.js"></script>
+    <style>
+        .content-item{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .like{
+
+        }
+    </style>
+</head>
+<body>
+<include file="public@nav"/>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <slides id="1">
+        <div class="swiper-slide" style="height: 500px">
+            <a href="{$vo.url|default=''}"><img src="{:cmf_get_image_url($vo.image)}" alt=""></a>
+        </div>
+        </slides>
+    </div>
+</div>
+<widget name="features">
+    <div class="s_title aos-init aos-animate" aos="fade-up" aos-duration="1000">
+        <h1 class="text-center">{$widget.title}</h1>
+        <h3 class="text-center">{$widget.vars.sub_title}</h3>
+    </div>
+</widget>
+
+
+    {//$vo.name}<br><!--标题-->
+    {//$vo.description}<br><!--描述-->
+    <!--<img src="{:cmf_get_image_url($vo.more.thumbnail)}"><br> &lt;!&ndash;图片路径&ndash;&gt;-->
+
+
+
+<div class="content">
+    <div class="bd img_size">
+        <div class="section">
+            <ul aos="fade-up" aos-duration="1000" class="aos-init aos-animate content-item">
+                <portal:categories item="vo">
+                    <div class="like">
+                        <li>
+                            <a href="/chanpin/dumocailiao/js2/12.html">
+                                <div class="pic_box"><img src="{:cmf_get_image_url($vo.more.thumbnail)}" alt="{$vo.name}" width="285" height="195"></div>
+                                <h1>{$vo.name}</h1>
+                            </a>
+                        </li>
+                    </div>
+                </portal:categories>
+                <div class="clear"></div>
+            </ul>
+            <a href="/chanpin/dumoshebei/" aos="fade-up" aos-duration="1000" class="more aos-init aos-animate">查看更多</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+<include file="public@footer"/>
+</body>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
+</html>

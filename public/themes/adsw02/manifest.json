@@ -1,0 +1,10 @@
+{
+  "name": "adsw",/*模板名,和目录名一样*/
+  "version": "1.0.0",/*模板版本号*/
+  "demo_url": "http://www.029gc.cn",/*模板演示地址*/
+  "author": "格创网络",/*模板作者*/
+  "lang": "zh-cn",/*模板的语言*/
+  "author_url": "http://www.029gc.cn",/*模板作者个人主页*/
+  "keywords": "格创网络企业站模板",/*模板关键字*/
+  "description": "格创网络企业站模板"/*模板描述*/
+}
